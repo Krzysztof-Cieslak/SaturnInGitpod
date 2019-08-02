@@ -1,0 +1,8 @@
+image: fsharp:netcore
+ports:
+  - port: 8085
+tasks:
+  - init: dotnet tool install fake-cli -g
+vscode:
+  extensions:
+    - Ionide.Ionide-fsharp@4.0.6:jY7uvWaRUfDGixUAwJWzOg==
