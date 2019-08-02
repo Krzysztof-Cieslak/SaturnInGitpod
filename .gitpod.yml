@@ -1,8 +1,9 @@
-image: fsharp:netcore
+image:
+  file: .gitpod/Dockerfile
 ports:
   - port: 8085
 tasks:
-  - init: dotnet tool install fake-cli -g
+  - init: dotnet tool install fake-cli paket -g
 vscode:
   extensions:
     - Ionide.Ionide-fsharp@4.0.6:jY7uvWaRUfDGixUAwJWzOg==
