@@ -3,9 +3,9 @@ image:
 ports:
   - port: 8085
 tasks:
-  - init: dotnet tool install fake-cli -g
-  - init: dotnet tool install paket -g
-  - init: export PATH=~/.dotnet/tools:$PATH
+  - init: dotnet tool install fake-cli -g && dotnet tool install paket -g && export PATH=~/.dotnet/tools:$PATH
+    command: fake build -t Run
+
 vscode:
   extensions:
     - Ionide.Ionide-fsharp@4.0.6:jY7uvWaRUfDGixUAwJWzOg==
