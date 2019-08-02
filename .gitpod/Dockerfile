@@ -9,3 +9,5 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     apt-get -y update && \
     apt-get -y install dotnet-sdk-2.2 && \
     apt -y clean;
+
+RUN dotnet tool install paket -g && dotnet tool install fake-cli -g && export PATH=~/.dotnet/tools:$PATH

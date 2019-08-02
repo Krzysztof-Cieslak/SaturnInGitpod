@@ -3,8 +3,7 @@ image:
 ports:
   - port: 8085
 tasks:
-  - init: dotnet tool install fake-cli -g && dotnet tool install paket -g && export PATH=~/.dotnet/tools:$PATH
-    command: fake build -t Run
+  - command: export PATH=~/.dotnet/tools:$PATH && fake build -t Run
 
 vscode:
   extensions:
